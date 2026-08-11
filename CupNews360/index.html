@@ -1,0 +1,704 @@
+<!doctype html>
+<!-- Define que o documento usa HTML5 -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título -->
+    <title>CupNews360 — Dando um 360 na Copa para Você</title>
+
+    <!-- Descrição -->
+    <meta
+      name="description"
+      content="CupNews360: tudo sobre a Copa do Mundo 2026 em um só lugar. Notícias, jogos e bastidores do Mundial dos três países."
+    />
+
+    <!-- Conexão das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Conecta as fontes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importa as fontes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700&family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importa o CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Faixa decorativa -->
+    <div class="faixa-tricolor" aria-hidden="true"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header" id="topo">
+      <!-- Agrupa o cabeçalho -->
+      <div class="header__container">
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="CupNews360 — página inicial"
+        >
+          <!-- Agrupa imagem e nome da logo -->
+          <span class="logo__marca">
+            <span class="logo__slot">
+              <img src="img/logo.png" alt="Logo CupNews360" class="logo__img" />
+            </span>
+
+            <!-- Nome do site -->
+            <span class="logo__texto">
+              <span class="logo__cup">Cup</span>
+              <span class="logo__news">News</span>
+              <span class="logo__360">360</span>
+            </span>
+          </span>
+
+          <!-- Slogan do site -->
+          <span class="logo__slogan"> Dando um 360 na Copa para Você </span>
+        </a>
+
+        <!-- Botão do menu para tela menor -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="navPrincipal"
+          aria-label="Abrir menu"
+        >
+
+          <!-- Hamburguer (Será alterado futuramente)-->
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navegação -->
+        <nav class="nav" id="navPrincipal">
+          <!-- Lista -->
+          <ul class="nav__lista">
+            <li>
+              <!-- Página atual -->
+              <a href="index.html" class="nav__link is-ativo">
+                Página Inicial
+              </a>
+            </li>
+
+            <li>
+              <a href="campeoes.html" class="nav__link2"> Campeões </a>
+            </li>
+            <li>
+              <a href="noticias.html" class="nav__link"> Últimas Notícias </a>
+            </li>
+
+            <li>
+              <a href="jogos.html" class="nav__link"> Jogos </a>
+            </li>
+
+            <li>
+              <a href="sobre.html" class="nav__link"> Sobre </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button id="mudar-tema" class="mudar-tema">
+          <img id="icone-tema" src="img/favicon/lua.png" alt="Alternar tema" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+      <!-- Seção principal -->
+      <section class="hero">
+        <!-- Textos principais -->
+        <div class="hero__conteudo">
+          <!-- Informação sobre a Copa -->
+          <p class="hero__etiqueta">
+            Copa do Mundo FIFA 2026 · <span class="txt-vermelho">Canadá</span> ·
+            <span class="txt-azul">Estados Unidos</span> ·
+            <span class="txt-verde">México</span>
+          </p>
+
+          <!-- Título principal -->
+          <h1 class="hero__titulo">
+            A Copa é <span class="txt-vermelho">tripla</span>, a cobertura é
+            <span class="txt-azul">completa</span>
+            e a energia é
+            <span class="txt-verde">total</span>.
+          </h1>
+
+          <!-- Texto apresentação -->
+          <p class="hero__texto">
+            Do sorteio de grupos às finais, o CupNews360 acompanha os 48 times,
+            os três países-sede e os bastidores de um Mundial histórico — direto
+            ao ponto, sem enrolação.
+          </p>
+
+          <!-- Botões de acesso rápido -->
+          <div class="hero__acoes">
+            <a href="noticias.html" class="botao botao--primario">
+              Ver últimas notícias
+            </a>
+
+            <a href="jogos.html" class="botao botao--fantasma">
+              Tabela de jogos
+            </a>
+          </div>
+        </div>
+
+        <!-- Área dos mascotes -->
+        <div class="hero__mascotes" aria-hidden="true">
+          <!-- Mascote do Canadá -->
+          <div class="mascote-card mascote-card--vermelho">
+            <div class="mascote-card__pais">
+              <span class="mascote-card__paisV">Ca</span>
+              <span class="mascote-card__paisB">na</span>
+              <span class="mascote-card__paisV">dá</span>
+            </div>
+
+            <span class="mascote-card__nome">Maple</span>
+          </div>
+
+          <!-- Mascote dos Estados Unidos -->
+          <div class="mascote-card mascote-card--azul">
+            <div class="mascote-card__pais">
+              <span class="mascote-card__paisA">E</span>
+              <span class="mascote-card__paisB">U</span>
+              <span class="mascote-card__paisV">A</span>
+            </div>
+
+            <span class="mascote-card__nome">Clutch</span>
+          </div>
+
+          <!-- Mascote do México -->
+          <div class="mascote-card mascote-card--verde">
+            <div class="mascote-card__pais">
+              <span class="mascote-card__paisVe">Mé</span>
+              <span class="mascote-card__paisB">xi</span>
+              <span class="mascote-card__paisV">co</span>
+            </div>
+
+            <span class="mascote-card__nome">Zayu</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção das notícias -->
+      <section class="secao" id="noticias">
+        <!-- Cabeçalho da seção -->
+        <div class="secao__cabecalho cabecalho-jogos"></div>
+        <div class="secao__cabecalho">
+          <!-- Título -->
+          <h2 class="secao__titulo">Últimas notícias</h2>
+
+          <!-- Data da última atualização -->
+          <span class="secao__atualizado" id="horaAtualizacao">
+            Atualizado 19/07/2026 às 19:10.
+          </span>
+        </div>
+
+        <!-- Grade dos cards de notícias -->
+        <div class="grade-noticias">
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <!-- Imagem de destaque da notícia -->
+            <div
+              class="card-noticia__imagem"
+              style="background-image: url(&quot;img/EspanhaCampea.avif&quot;)"
+            >
+              <!-- Tag indicando a seleção -->
+              <span class="tag tag--espanha">Espanha</span>
+            </div>
+
+            <!-- Conteúdo da notícia -->
+            <div class="card-noticia__corpo">
+              <!-- Título -->
+              <h3>Espanha é a Campeã da Copa do Mundo de 2026!!</h3>
+
+              <!-- Resumo -->
+              <p>
+                A Espanha venceu a Argentina na Final da Copa do Mundo por 1 a 0
+                aos 90 minutos!
+              </p>
+
+              <!-- Link para a notícia completa -->
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <div
+              class="card-noticia__imagem"
+              style="background-image: url(&quot;img/Inglaterra.WEBP&quot;)"
+            >
+              <!-- País da notícia -->
+              <span class="tag tag--inglaterra">Inglaterra</span>
+            </div>
+
+            <div class="card-noticia__corpo">
+              <h3>Inglaterra garante Terceiro Lugar na Copa.</h3>
+
+              <p>
+                Com direito a 10 gols na partida e um Hat-Trick de Bukayo Saka,
+                a Inglaterra vence a França e ganham o Terceiro Lugar da Copa do
+                Mundo de 2026!
+              </p>
+
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <div
+              class="card-noticia__imagem"
+              style="background-image: url(&quot;img/Argentina.jpg&quot;)"
+            >
+              <span class="tag tag--argentina">Argentina</span>
+            </div>
+
+            <div class="card-noticia__corpo">
+              <h3>Argentina nas Finais Novamente!</h3>
+
+              <p>
+                Com duas assistências de Lionel Messi, a Argentina ganha da
+                Inglaterra aos 90+2' com um gol de cabeça de Lautaro Martínez!
+              </p>
+
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <div
+              class="card-noticia__imagem"
+              style="background-image: url(&quot;img/EspanhaFinal.avif&quot;)"
+            >
+              <span class="tag tag--espanha">Espanha</span>
+            </div>
+
+            <div class="card-noticia__corpo">
+              <h3>Espanha nas Finais!</h3>
+
+              <p>
+                Com o bom Tiki-Taka Espanhol, a Espanha ganha da França por 2 a
+                0 e aguarda adversários entre Argentina e Inglaterra para as
+                Finais da Copa do Mundo de 2026.
+              </p>
+
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <div
+              class="card-noticia__imagem"
+              style="background-image: url(&quot;img/ArgentinaSuica.avif&quot;)"
+            >
+              <span class="tag tag--argentina">Argentina</span>
+            </div>
+
+            <div class="card-noticia__corpo">
+              <h3>3 a 1 nas Quartas de Finais!</h3>
+
+              <p>
+                A Argentina atropelou a Suíça por 3 a 1 nas Quartas de Finais da
+                Copa do Mundo de 2026, e enfrentará a Inglaterra.
+              </p>
+
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+
+          <!-- Card da notícia -->
+          <article class="card-noticia">
+            <div
+              class="card-noticia__imagem"
+              style="
+                background-image: url(&quot;img/InglaterraNoruega.avif&quot;);
+              "
+            >
+              <span class="tag tag--inglaterra">Inglaterra</span>
+            </div>
+
+            <div class="card-noticia__corpo">
+              <h3>Bellingham Decisivo!</h3>
+
+              <p>
+                Com direito a 2 gols de Bellingham, sendo o segundo aos 93min
+                para garantir a vitória contra a Noruega, a Inglaterra avança
+                para as SemiFinais e aguarda confronto entre Argentina x Suíça.
+              </p>
+
+              <a href="noticias.html" class="link-leia-mais">
+                Leia a matéria completa
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+      <!-- Seção com os Últimos jogos -->
+      <section class="secao secao--escura" id="jogos-preview">
+        <!-- Cabeçalho da seção -->
+        <div class="secao__cabecalho">
+          <!-- Título -->
+          <!-- Quero que ele "suba" um pouco, quando passar o mouse por cima do placar abaixo dele. (Futuramente) -->
+          <h2 class="secao__titulo">Últimos jogos</h2>
+
+          <!-- Link para ver todos os jogos -->
+          <!-- Quero que ele "suba" um pouco, quando passar o mouse por cima do placar abaixo dele. (Futuramente) -->
+          <a href="jogos.html" class="link-ver-todos"> Ver tabela completa </a>
+        </div>
+
+        <!-- Grade onde ficam os jogos -->
+        <div class="grade-jogos">
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <!-- Fase da competição -->
+            <div class="placar-card__fase">Final</div>
+
+            <!-- Confronto -->
+            <div class="placar-card__confronto">
+              <!-- Primeiro time -->
+              <div class="placar-card__time">
+                <!-- Escudo -->
+                <img
+                  class="placar-card__escudo"
+                  src="img/espanha.svg"
+                  alt="Espanha"
+                />
+
+                <!-- Nome do time -->
+                <span class="placar-card__nome-time"> Espanha </span>
+              </div>
+
+              <!-- Indica o confronto -->
+              <span class="placar-card__versus"> 1 a 0 </span>
+
+              <!-- Segundo time -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/argentina.svg"
+                  alt="Argentina"
+                />
+
+                <span class="placar-card__nome-time"> Argentina </span>
+              </div>
+            </div>
+
+            <!-- Local e horário -->
+            <div class="placar-card__local">
+              Estádio de Nova York · Domingo 19/07.
+            </div>
+          </div>
+
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <div class="placar-card__fase">Disputa pelo Terceiro Lugar</div>
+
+            <div class="placar-card__confronto">
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/inglaterra.svg"
+                  alt="Inglaterra"
+                />
+
+                <span class="placar-card__nome-time"> Inglaterra </span>
+              </div>
+
+              <span class="placar-card__versus"> 6 a 4 </span>
+
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/frança.svg"
+                  alt="França"
+                />
+
+                <span class="placar-card__nome-time"> França </span>
+              </div>
+            </div>
+
+            <!-- Informações do jogo -->
+            <div class="placar-card__local">
+              Estádio de Miami · Sábado 18/07.
+            </div>
+          </div>
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <!-- Fase da competição -->
+            <div class="placar-card__fase">SemiFinal</div>
+
+            <!-- Times que irão se enfrentar -->
+            <div class="placar-card__confronto">
+              <!-- Primeiro time -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/argentina.svg"
+                  alt="Argentina"
+                />
+
+                <span class="placar-card__nome-time"> Argentina </span>
+              </div>
+
+              <!-- Indica o confronto -->
+              <span class="placar-card__versus"> 2 a 1 </span>
+
+              <!-- Segundo time -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/inglaterra.svg"
+                  alt="Inglaterra"
+                />
+
+                <span class="placar-card__nome-time"> Inglaterra </span>
+              </div>
+            </div>
+
+            <!-- Local e horário -->
+            <div class="placar-card__local">
+              Estádio de Atlanta · Quarta 15/07.
+            </div>
+          </div>
+
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <!-- Fase da competição -->
+            <div class="placar-card__fase">SemiFinal</div>
+
+            <div class="placar-card__confronto">
+              <!-- França -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/espanha.svg"
+                  alt="Espanha"
+                />
+
+                <span class="placar-card__nome-time"> Espanha </span>
+              </div>
+
+              <span class="placar-card__versus"> 2 a 0 </span>
+
+              <!-- Marrocos -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/frança.svg"
+                  alt="França"
+                />
+
+                <span class="placar-card__nome-time"> França </span>
+              </div>
+            </div>
+
+            <!-- Informações da partida -->
+            <div class="placar-card__local">
+              Estádio de Dallas · Terça 14/07.
+            </div>
+          </div>
+
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <div class="placar-card__fase">Quartas de Final</div>
+
+            <div class="placar-card__confronto">
+              <!-- Espanha -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/argentina.svg"
+                  alt="Argentina"
+                />
+
+                <span class="placar-card__nome-time"> Argentina </span>
+              </div>
+
+              <span class="placar-card__versus"> 3 a 1 </span>
+
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/suiça.svg"
+                  alt="Suíça"
+                />
+
+                <span class="placar-card__nome-time"> Suíça</span>
+              </div>
+            </div>
+
+            <!-- Data e local -->
+            <div class="placar-card__local">
+              Estádio de Kansas City · Sábado 11/07.
+            </div>
+          </div>
+
+          <!-- Card do jogo -->
+          <div class="placar-card">
+            <div class="placar-card__fase">Quartas de Final</div>
+
+            <div class="placar-card__confronto">
+              <!-- Noruega -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/inglaterra.svg"
+                  alt="Inglaterra"
+                />
+
+                <span class="placar-card__nome-time"> Inglaterra </span>
+              </div>
+
+              <span class="placar-card__versus"> 2 a 1 </span>
+
+              <!-- Inglaterra -->
+              <div class="placar-card__time">
+                <img
+                  class="placar-card__escudo"
+                  src="img/noruega.svg"
+                  alt="Noruega"
+                />
+
+                <span class="placar-card__nome-time"> Noruega </span>
+              </div>
+            </div>
+
+            <!-- Informações do jogo -->
+            <div class="placar-card__local">
+              Estádio de Miami · Sábado 11/07.
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+      <!-- Seção com informações da Copa -->
+      <section class="secao" id="ficha-tecnica">
+        <!-- Cabeçalho -->
+        <div class="secao__cabecalho">
+          <!-- Título -->
+          <h2 class="secao__titulo">A Copa em números</h2>
+        </div>
+
+        <!-- Grade com os dados da Copa -->
+        <div class="grade-fatos">
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-vermelho">3</span>
+
+            <span class="fato-card__legenda">
+              países-sede: Canadá, México e Estados Unidos
+            </span>
+          </div>
+
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-azul">48</span>
+
+            <span class="fato-card__legenda">
+              seleções na maior Copa da história
+            </span>
+          </div>
+
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-verde">104</span>
+
+            <span class="fato-card__legenda">
+              jogos disputados na competição
+            </span>
+          </div>
+
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-vermelho"> 11/06 </span>
+
+            <span class="fato-card__legenda">
+              abertura oficial do Mundial
+            </span>
+          </div>
+
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-azul"> 19/07 </span>
+
+            <span class="fato-card__legenda"> grande final da Copa 2026 </span>
+          </div>
+
+          <!-- Informação -->
+          <div class="fato-card">
+            <span class="fato-card__numero txt-verde"> 1 </span>
+
+            <span class="fato-card__legenda"> Seleção campeã apenas. </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+      <!-- Faixa decorativa -->
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+
+      <!-- Container do rodapé -->
+      <div class="footer__container">
+        <!-- Marca do site -->
+        <div class="footer__marca">
+          <!-- Nome do site -->
+          <span class="logo__texto">
+            <span class="logo__cup">Cup</span>
+            <span class="logo__news">News</span>
+            <span class="logo__360">360</span>
+          </span>
+
+          <!-- Slogan -->
+          <p>Dando um 360 na Copa para Você.</p>
+        </div>
+
+        <!-- Menu de navegação do rodapé -->
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link is-ativo">Página Inicial</a>
+          <a href="sobre.html" class="footer__link2">Campeões</a>
+          <a href="noticias.html" class="footer__link">Últimas Notícias</a>
+          <a href="jogos.html" class="footer__link">Jogos</a>
+          <a href="sobre.html" class="footer__link">Sobre</a>
+        </nav>
+        <!-- Informações do projeto -->
+        <p class="footer__nota">Projeto acadêmico · CupNews360</p>
+      </div>
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+    </footer>
+
+    <button id="voltar-topo" class="voltar-topo" aria-label="Voltar ao topo">
+      <img src="img/favicon/seta-para-cima.png" alt="Voltar ao topo" />
+
+      <!-- Importa os JavaScript's -->
+      <script src="js/script.js"></script>
+      <script src="js/tema.js"></script>
+      <script src="js/topo.js"></script>
+    </button>
+  </body>
+</html>

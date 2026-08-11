@@ -1,0 +1,260 @@
+<!doctype html>
+<!-- Define que o documento usa HTML5 -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título -->
+    <title>Jogos — CupNews360</title>
+
+    <!-- Descrição -->
+    <meta
+      name="description"
+      content="Acompanhe a tabela completa de jogos, horários e resultados da Copa do Mundo 2026 no CupNews360."
+    />
+
+    <!-- Conexão das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700&family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importa o CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jogos.css" />
+  </head>
+
+  <body>
+    <!-- Faixa decorativa -->
+    <div class="faixa-tricolor" aria-hidden="true"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header" id="topo">
+      <div class="header__container">
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="CupNews360 — página inicial"
+        >
+          <span class="logo__marca">
+            <span class="logo__slot">
+              <img src="img/logo.png" alt="Logo CupNews360" class="logo__img" />
+            </span>
+            <span class="logo__texto">
+              <span class="logo__cup">Cup</span>
+              <span class="logo__news">News</span>
+              <span class="logo__360">360</span>
+            </span>
+          </span>
+          <span class="logo__slogan">Dando um 360 na Copa para Você</span>
+        </a>
+
+        <!-- Botão do menu para tela menor -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="navPrincipal"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navegação -->
+        <nav class="nav" id="navPrincipal">
+          <ul class="nav__lista">
+            <li><a href="index.html" class="nav__link">Página Inicial</a></li>
+            <li><a href="campeoes.html" class="nav__link2">Campeões</a></li>
+            <li>
+              <a href="noticias.html" class="nav__link">Últimas Notícias</a>
+            </li>
+            <li><a href="jogos.html" class="nav__link is-ativo">Jogos</a></li>
+            <li><a href="sobre.html" class="nav__link">Sobre</a></li>
+          </ul>
+        </nav>
+
+        <button id="mudar-tema" class="mudar-tema">
+          <img id="icone-tema" src="img/favicon/lua.png" alt="Alternar tema" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+      <!-- Cabeçalho da página de jogos -->
+      <section class="secao" style="padding-bottom: 0">
+        <div class="secao__cabecalho">
+          <h1 class="secao__titulo">Tabela de Jogos</h1>
+          <span class="secao__atualizado" id="horaAtualizacao">
+            Atualizando em 05/08/2026 às 15:54.
+          </span>
+        </div>
+      </section>
+
+      <!-- Onde o React vai ser aplicado -->
+      <section class="secao secao--escura" id="jogos-tabela">
+        <!-- PORTAL DO REACT -->
+        <div id="root-jogos">
+          <!-- O React vai injetar a .grade-jogos e os cards aqui dentro -->
+          <p style="text-align: center; padding: 40px; color: #9db4cc">
+            Carregando jogos...
+          </p>
+        </div>
+      </section>
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__marca">
+          <span class="logo__texto">
+            <span class="logo__cup">Cup</span>
+            <span class="logo__news">News</span>
+            <span class="logo__360">360</span>
+          </span>
+          <p>Dando um 360 na Copa para Você.</p>
+        </div>
+
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">Página Inicial</a>
+          <a href="sobre.html" class="footer__link2">Campeões</a>
+          <a href="noticias.html" class="footer__link">Últimas Notícias</a>
+          <a href="jogos.html" class="footer__link is-ativo">Jogos</a>
+          <a href="sobre.html" class="footer__link">Sobre</a>
+        </nav>
+        <p class="footer__nota">Projeto acadêmico · CupNews360</p>
+      </div>
+      <div class="faixa-tricolor" aria-hidden="true"></div>
+    </footer>
+
+    <button id="voltar-topo" class="voltar-topo" aria-label="Voltar ao topo">
+      <img src="img/favicon/seta-para-cima.png" alt="Voltar ao topo" />
+    </button>
+
+    <!--  Carrega os dados ANTES do React -->
+    <script src="js/dados.js"></script>
+
+    <!-- Importações do React e Babel -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Script do React -->
+    <script type="text/babel">
+      console.log("Lista de jogos carregada:", listaJogos);
+
+      // Componente de cada Card
+      function JogoCard({ jogo }) {
+        return (
+          <div className="placar-card">
+            <div className="placar-card__fase">{jogo.fase}</div>
+
+            <div className="placar-card__confronto">
+              <div className="placar-card__time">
+                <img
+                  className="placar-card__escudo"
+                  src={jogo.escudo1}
+                  alt={jogo.time1}
+                />
+                <span className="placar-card__nome-time">{jogo.time1}</span>
+              </div>
+
+              <span className="placar-card__versus">{jogo.placar}</span>
+
+              <div className="placar-card__time">
+                <img
+                  className="placar-card__escudo"
+                  src={jogo.escudo2}
+                  alt={jogo.time2}
+                />
+                <span className="placar-card__nome-time">{jogo.time2}</span>
+              </div>
+            </div>
+
+            <div className="placar-card__local">{jogo.local}</div>
+          </div>
+        );
+      }
+
+      // Componente principal
+      function App() {
+        const [termoBusca, setTermoBusca] = React.useState("");
+
+        const jogosFiltrados = listaJogos.filter((jogo) => {
+          const busca = termoBusca.toLowerCase();
+
+          return (
+            jogo.fase.toLowerCase().includes(busca) ||
+            jogo.time1.toLowerCase().includes(busca) ||
+            jogo.time2.toLowerCase().includes(busca) ||
+            jogo.placar.toLowerCase().includes(busca) ||
+            jogo.local.toLowerCase().includes(busca)
+          );
+        });
+
+        return (
+          <div>
+            {/* Contêiner de filtros e caixa de busca utilizando suas classes CSS */}
+            <div
+              className="noticias-filtros"
+              style={{ justifyContent: "center" }}
+            >
+              <div className="busca-box">
+                <input
+                  type="text"
+                  className="campo-busca"
+                  placeholder="Pesquisar por time, fase, data ou placar..."
+                  value={termoBusca}
+                  onChange={(e) => setTermoBusca(e.target.value)}
+                />
+              </div>
+            </div>
+
+            {/* Grade de jogos filtrados */}
+            <div className="grade-jogos">
+              {jogosFiltrados.length > 0 ? (
+                jogosFiltrados.map((jogo) => (
+                  <JogoCard key={jogo.id} jogo={jogo} />
+                ))
+              ) : (
+                <p
+                  style={{
+                    textAlign: "center",
+                    color: "var(--cor-texto-suave)",
+                    gridColumn: "1 / -1",
+                    padding: "40px",
+                  }}
+                >
+                  Nenhum jogo encontrado.
+                </p>
+              )}
+            </div>
+          </div>
+        );
+      }
+
+      // Renderiza o App dentro da div "root-jogos"
+      const container = document.getElementById("root-jogos");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+    </script>
+
+    <!-- Outros scripts normais do site -->
+    <script src="js/script.js"></script>
+    <script src="js/tema.js"></script>
+    <script src="js/topo.js"></script>
+  </body>
+</html>

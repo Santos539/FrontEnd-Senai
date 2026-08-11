@@ -1,0 +1,2 @@
+O Vanilla é parecido com o React, alimento o banco em "noticias.js" e apenas altero as informações mantidas no const NOTICIAS_DATA exibindo na tela com o mesmo estilo, mudando apenas as informações.
+A barra de pesquisa utiliza o ".map", filtra o que está na barra de pesquisa, transforma em letra minúscula para facilitar, e exibe as informações baseadas no título, resumo e tag.
