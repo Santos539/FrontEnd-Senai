@@ -1,4 +1,0 @@
-A Barra de Pesquisa e os Cards, ambas foram aplicadas com React (ou pelo menos uma tentativa), onde o objetivo é economizar linhas de código em um arquivo "dados.js".
-Onde eu apenas copio a estrutura de um card, e substituo as informações, e automaticamente será implementado na página, mantendo o mesmo estilo. 
-
-Encontrará o React no código a partir da linha 144 em "jogos.html" e a estrutura dos dados em "dados.js".
