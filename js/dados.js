@@ -847,7 +847,7 @@ const listaJogos = [
     id: 84,
     fase: "Grupo I",
     time1: "França",
-    escudo1: "img/franca.svg",
+    escudo1: "img/frança.svg",
     time2: "Senegal",
     escudo2: "img/senegal.svg",
     placar: "3 a 1",
