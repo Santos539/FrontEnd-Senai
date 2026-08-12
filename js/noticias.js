@@ -16,7 +16,7 @@ const NOTICIAS_DATA = [
       "Com direito a 10 gols na partida e um Hat-Trick de Bukayo Saka, a Inglaterra vence a França em jogo eletrizante.",
     tag: "Inglaterra",
     tagClass: "tag--inglaterra",
-    imagem: "img/Inglaterra.WEBP",
+    imagem: "img/Inglaterra.webp",
   },
   {
     id: 3,
